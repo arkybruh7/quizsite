@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>Quiz Results</header>
+
+   <div class="result-container">
+      <h2>Your Score: <span id="score-display">0</span></h2>
+      <p>Thank you for participating in the quiz!</p>
+      <p id="performance-message"></p>
+
+      <button class="submit-btn" onclick="window.location.href='quiz.html'">Try Again</button>
+   </div>
+
+   <script>
+      window.onload = function() {
+          // Retrieve score from localStorage
+          let score = localStorage.getItem("score");
+
+          // If no score is found, set score to 0
+          if (!score) {
+              score = 0;
+          }
+
+          // Display the score
+          document.getElementById("score-display").textContent = score;
+
+          // Display performance message based on the score
+          let performanceMessage = "";
+          if (score >= 8) {
+              performanceMessage = "Excellent! You did a great job!";
+          } else if (score >= 5) {
+              performanceMessage = "Good job! You have a decent understanding.";
+          } else {
+              performanceMessage = "Better luck next time! Keep practicing!";
+          }
+
+          document.getElementById("performance-message").textContent = performanceMessage;
+      };
+   </script>
+
+   <footer>
+       <p>&copy; 2025 Online Quiz Platform | Made By Rahul Shrestha</p>
+   </footer>
+</body>
+</html>

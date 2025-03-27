@@ -1,0 +1,286 @@
+/* Global Reset for Consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Login Page Styles */
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 20px;
+    color: green;
+}
+
+/* Quiz Container Styling */
+.quiz-container {
+    max-width: 700px;
+    width: 90%;
+    margin: 30px 0;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto; /* Allow scrolling inside quiz container */
+    max-height: 80vh; /* Limit max height to allow scrolling */
+}
+
+.quiz-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Question Styling */
+.question {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 15px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.question-text {
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* Options Styling */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+}
+
+.options input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: inline-block;
+    position: relative;
+}
+
+.options input:checked {
+    background-color: #007bff;
+    border: 2px solid #0056b3;
+}
+
+.options input:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.options label:hover {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Submit Button */
+.submit-btn {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #0056b3, #004494);
+    transform: scale(1.05);
+}
+
+/* Result Container */
+.result-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Score Box Styling */
+.score-box {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+#score-display {
+    font-size: 40px;
+    font-weight: bold;
+    color: #28a745; /* Green for success */
+}
+
+/* Performance Message Styling */
+.performance-message {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Try Again Button Styling */
+.result-container button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.result-container button:hover {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.5);
+}
+
+.result-container button:active {
+    transform: scale(0.95);
+}
+
+/* Button Animation (Bouncing Effect) */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 14px;
+    margin-top: auto;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure Page Centering for Both Login and Quiz */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
