@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>Online Quiz</header>
+<div class="quiz-container">
+    <form id="quiz-form">
+        <div class="question">
+            <div class="question-text">1) Which OSI layer is responsible for both error control and flow control, but only within the same network and not end-to-end?</div>
+            <div class="options">
+                <input type="radio" name="q1" value="A"> A) Transport Layer<br>
+                <input type="radio" name="q1" value="B"> B) Network Layer<br>
+                <input type="radio" name="q1" value="C"> C) Data Link Layer<br>
+                <input type="radio" name="q1" value="D"> D) Session Layer<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">2) Which of the following is a valid IPv4 address?</div>
+            <div class="options">
+                <input type="radio" name="q2" value="A"> A) 256.34.1.1<br>
+                <input type="radio" name="q2" value="B"> B) 192.168.1<br>
+                <input type="radio" name="q2" value="C"> C) 10.0.0.1<br>
+                <input type="radio" name="q2" value="D"> D) 981.65.186<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">3) Which of the following is an incorrect C syntax?</div>
+            <div class="options">
+                <input type="radio" name="q3" value="A"> A) int x = 5;<br>
+                <input type="radio" name="q3" value="B"> B) float 3.14 = pi;<br>
+                <input type="radio" name="q3" value="C"> C) char c = 'A';<br>
+                <input type="radio" name="q3" value="D"> D) printf("Hello, World!");<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">4) Which of the following is a primary benefit of cloud computing?</div>
+            <div class="options">
+                <input type="radio" name="q4" value="A"> A) On-demand scalability<br>
+                <input type="radio" name="q4" value="B"> B) Requires no internet connection<br>
+                <input type="radio" name="q4" value="C"> C) Limited data storage<br>
+                <input type="radio" name="q4" value="D"> D) Fixed pricing model<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">5) Which of the following is a key feature of machine learning?</div>
+            <div class="options">
+                <input type="radio" name="q5" value="A"> A) Predicting outcomes based on data<br>
+                <input type="radio" name="q5" value="B"> B) Manual programming for each task<br>
+                <input type="radio" name="q5" value="C"> C) Replacing human decision-makers entirely<br>
+                <input type="radio" name="q5" value="D"> D) Using pre-written rules for decisions<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">6) Which of the following is a characteristic of a distributed database?</div>
+            <div class="options">
+                <input type="radio" name="q6" value="A"> A) Data is stored in a single location<br>
+                <input type="radio" name="q6" value="B"> B) Data is stored across multiple sites<br>
+                <input type="radio" name="q6" value="C"> C) Centralized control of data<br>
+                <input type="radio" name="q6" value="D"> D) No replication of data<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">7) Which of the following is a valid way to declare a variable in JavaScript?</div>
+            <div class="options">
+                <input type="radio" name="q7" value="A"> A) var myVariable = 10;<br>
+                <input type="radio" name="q7" value="B"> B) variable myVariable = 10;<br>
+                <input type="radio" name="q7" value="C"> C) int myVariable = 10;<br>
+                <input type="radio" name="q7" value="D"> D) let 10 = myVariable;<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">8) Which event is triggered when a user clicks on an HTML button?</div>
+            <div class="options">
+                <input type="radio" name="q8" value="A"> A) onload<br>
+                <input type="radio" name="q8" value="B"> B) onclick<br>
+                <input type="radio" name="q8" value="C"> C) onhover<br>
+                <input type="radio" name="q8" value="D"> D) onsubmit<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">9) Which of the following is a core feature of Object-Oriented Programming (OOP)?</div>
+            <div class="options">
+                <input type="radio" name="q9" value="A"> A) Functions are executed in a sequence<br>
+                <input type="radio" name="q9" value="B"> B) Data and methods are encapsulated within classes<br>
+                <input type="radio" name="q9" value="C"> C) Programs are written in a single block of code<br>
+                <input type="radio" name="q9" value="D"> D) Data is not reusable across different objects<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-text">10) Which of the following is characteristic of the Agile software development model?</div>
+            <div class="options">
+                <input type="radio" name="q10" value="A"> A) Linear and sequential development<br>
+                <input type="radio" name="q10" value="B"> B) A fixed scope and strict deadlines<br>
+                <input type="radio" name="q10" value="C"> C) Iterative and incremental development<br>
+                <input type="radio" name="q10" value="D"> D) No client involvement after requirements gathering<br>
+            </div>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
+    </form>
+</div>
+
+<script>
+    function submitQuiz() {
+        const answers = {
+            q1: "C",
+            q2: "C",
+            q3: "B",
+            q4: "A",
+            q5: "A",
+            q6: "B",
+            q7: "A",
+            q8: "B",
+            q9: "B",
+            q10: "C"
+        };
+
+        let score = 0;
+        let form = document.forms["quiz-form"];
+
+        for (let i = 1; i <= 10; i++) {
+            let question = form["q" + i];
+            for (let j = 0; j < question.length; j++) {
+                if (question[j].checked && question[j].value === answers["q" + i]) {
+                    score++;
+                }
+            }
+        }
+
+        localStorage.setItem("score", score);
+        window.location.href = "result.html";
+    }
+</script>
+<footer>
+    <p>&copy; 2025 Online Quiz Platform | Made By Rahul Shrestha</p>
+</footer>
+
+</body>
+</html>
